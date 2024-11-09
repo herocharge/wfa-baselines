@@ -1,0 +1,3 @@
+[submodule "external/wfa-gpu"]
+	path = external/wfa-gpu
+	url = git@github.com:quim0/WFA-GPU.git
