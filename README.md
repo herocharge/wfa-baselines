@@ -72,7 +72,7 @@ The WFA2-lib includes the benchmarking tool *align-benchmark* to test and compar
 Once you have the dataset ready, you can run the *align-benchmark* tool to benchmark the performance of a specific pairwise alignment method. For example, the WFA algorithm:
 
 ```
-$> ./align_benchmark.sh -i sample.dataset.seq -a gap-affine-wfa
+$> ./cpu_baseline.sh -i sample.dataset.seq -a gap-affine-wfa
 ...processed 10000 reads (benchmark=125804.398 reads/s;alignment=188049.469 reads/s)
 ...processed 20000 reads (benchmark=117722.406 reads/s;alignment=180925.031 reads/s)
 [...]
@@ -86,7 +86,7 @@ $> ./align_benchmark.sh -i sample.dataset.seq -a gap-affine-wfa
 The *align-benchmark* tool will finish and report overall benchmark time (including reading the input, setup, checking, etc.) and the time taken by the algorithm (i.e., *Time.Alignment*). If you want to measure the accuracy of the alignment method, you can add the option `--check` and all the alignments will be verified. 
 
 ```
-$> ./align_benchmark.sh -i sample.dataset.seq -a gap-affine-wfa --check
+$> ./cpu_baseline.sh -i sample.dataset.seq -a gap-affine-wfa --check
 ...processed 10000 reads (benchmark=14596.232 reads/s;alignment=201373.984 reads/s)
 ...processed 20000 reads (benchmark=13807.268 reads/s;alignment=194224.922 reads/s)
 [...]
