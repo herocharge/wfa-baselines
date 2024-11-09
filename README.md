@@ -263,10 +263,8 @@ Running the binary without any arguments lists the help menu:
         -t, --threads-per-block             (int) Number of CUDA threads per alginment: Number of CUDA threads per block, each block computes one or multiple alignment
         -w, --workers                       (int) GPU workers: Number of blocks ('workers') to be running on the GPU.
 [Examples]
-        ./bin/wfa.affine.gpu -i sequences.seq -b <batch_size> -o scores.out
-        ./bin/wfa.affine.gpu -i sequences.seq -b <batch_size> -B auto -o scores-banded.out
-        ./bin/wfa.affine.gpu -Q queries.fasta -T targets.fasta -b <batch_size> -o scores.out
-        ./bin/wfa.affine.gpu -Q queries.fasta -T targets.fasta -b <batch_size> -x -o cigars.out
+        ./gpu_baseline.sh -i sequences.seq -b <batch_size> -o scores.out
+        ./gpu_baseline.sh -i sequences.seq -b <batch_size> -B auto -o scores-banded.out
 ```
 
 Choosing the correct alignment and system options is key for performance. The tool tries to automatically choose adequate parameters, but the user
